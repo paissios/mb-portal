@@ -1,0 +1,32 @@
+@import "../../variables.scss";
+
+.loginFormWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .loginForm {
+        border: 1px solid $darkGray;
+        border-radius: 5px;
+        padding: 20px;
+        width: 300px;
+
+        .formHeader {
+            img {
+                max-width: 100px;
+                height: auto;
+                margin-bottom: 20px;
+                object-fit: contain;
+                margin-inline: auto;
+                display: block;
+            }
+        }
+
+        .error {
+            color: #d32f2f;
+            font-size: 14px;
+        }
+    }
+}

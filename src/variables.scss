@@ -1,0 +1,12 @@
+$gray: #525866;
+$white: #ffffff;
+$darkGray: #0A0D14;
+$lightGray: #f6f6f6;
+
+@mixin transition($property, $transition) {
+    -webkit-transition: $property $transition ease-in-out;
+    -moz-transition: $property $transition ease-in-out;
+    -ms-transition: $property $transition ease-in-out;
+    -o-transition: $property $transition ease-in-out;
+    transition: $property $transition ease-in-out;
+}
