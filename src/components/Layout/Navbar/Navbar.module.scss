@@ -1,0 +1,22 @@
+@import "../../../variables.scss";
+
+.navbarContentWrapper {
+    .navLink {
+        text-decoration: none;
+        color: inherit;
+
+        svg {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    :global {
+        a.active {
+            color: $blue;
+
+            svg {
+                fill: $blue;
+            }
+        }
+    }
+}

@@ -2,6 +2,9 @@ $gray: #525866;
 $white: #ffffff;
 $darkGray: #0A0D14;
 $lightGray: #f6f6f6;
+$black: #000000;
+$blue: #1976d2;
+$orange: #ff5d00;
 
 @mixin transition($property, $transition) {
     -webkit-transition: $property $transition ease-in-out;
