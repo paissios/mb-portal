@@ -1,0 +1,72 @@
+{
+  "fields": [
+    {
+      "name": "fullName",
+      "label": "Full Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email",
+      "label": "Email Address",
+      "type": "email",
+      "required": true
+    },
+    {
+      "name": "password",
+      "label": "Password",
+      "type": "password",
+      "required": true,
+      "minLength": 8
+    },
+    {
+      "name": "confirmPassword",
+      "label": "Confirm Password",
+      "type": "password",
+      "required": true
+    },
+    {
+      "name": "dateOfBirth",
+      "label": "Date of Birth",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "select",
+      "options": ["Male", "Female", "Non-binary", "Prefer not to say"],
+      "required": true
+    },
+    {
+      "name": "occupation",
+      "label": "Occupation",
+      "type": "text"
+    },
+    {
+      "name": "salary",
+      "label": "Annual Salary",
+      "type": "number",
+      "min": 0,
+      "max": 1000000
+    },
+    {
+      "name": "bio",
+      "label": "Short Bio",
+      "type": "textarea",
+      "maxLength": 500
+    },
+    {
+      "name": "skills",
+      "label": "Skills",
+      "type": "multiselect",
+      "options": ["JavaScript", "Python", "Java", "C++", "Ruby", "PHP", "Other"]
+    },
+    {
+      "name": "termsAccepted",
+      "label": "I accept the terms and conditions",
+      "type": "checkbox",
+      "required": true
+    }
+  ]
+}

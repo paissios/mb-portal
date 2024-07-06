@@ -1,18 +1,27 @@
 import React, { useState } from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, FormikHelpers } from "formik";
+import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import loginIcon from "../../assets/images/logo.png";
 import { useNavigate } from "react-router";
 import { Button, TextField } from "@mui/material";
 import { authenticateUser } from "../../helpers/authHelper";
+import { signInSuccess } from "../../feature/login/authSlice";
 
 import classes from "./LoginForm.module.scss";
+
+interface FormValues {
+  email: string;
+  password: string;
+}
 
 const LoginForm: React.FC = () => {
   const initialValues = {
     email: "",
     password: "",
   };
+
+  const dispatch = useDispatch();
 
   const [formError, setFormError] = useState("");
 
@@ -26,14 +35,18 @@ const LoginForm: React.FC = () => {
   const navigate = useNavigate();
 
   const submitHandler = async (
-    values: any,
-    { setSubmitting, setErrors }: any
+    values: FormValues,
+    { setSubmitting }: FormikHelpers<FormValues>
   ) => {
-    console.log(values);
-
     const result = await authenticateUser(values.email, values.password);
 
     if (result.success) {
+      dispatch(
+        signInSuccess({
+          email: values.email,
+          name: result.data?.name,
+        })
+      );
       navigate("/");
     } else {
       setFormError(result.message!);
@@ -63,7 +76,7 @@ const LoginForm: React.FC = () => {
                 <Field
                   type="email"
                   name="email"
-                  placeholder="test@test.com"
+                  placeholder="email@test.com"
                   as={TextField}
                   variant="outlined"
                   label="Email Address*"

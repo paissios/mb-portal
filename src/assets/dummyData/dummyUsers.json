@@ -1,0 +1,222 @@
+[
+  {
+    "id": "1",
+    "firstName": "John",
+    "lastName": "Doe",
+    "nationality": "American",
+    "phoneNumber": "+1 (555) 123-4567",
+    "lastMonthBill": 89.99,
+    "address": "123 Main St, Anytown, USA",
+    "servicesSubscribed": 3,
+    "age": 35
+  },
+  {
+    "id": "2",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "nationality": "Canadian",
+    "phoneNumber": "+1 (555) 987-6543",
+    "lastMonthBill": 75.5,
+    "address": "456 Maple Ave, Toronto, Canada",
+    "servicesSubscribed": 2,
+    "age": 28
+  },
+  {
+    "id": "3",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "nationality": "British",
+    "phoneNumber": "+44 20 7946 0958",
+    "lastMonthBill": 65.25,
+    "address": "789 Oxford St, London, UK",
+    "servicesSubscribed": 1,
+    "age": 42
+  },
+  {
+    "id": "4",
+    "firstName": "Mohammed",
+    "lastName": "Ali",
+    "nationality": "Egyptian",
+    "phoneNumber": "+20 2 2445 6789",
+    "lastMonthBill": 55.0,
+    "address": "321 Nile Rd, Cairo, Egypt",
+    "servicesSubscribed": 2,
+    "age": 31
+  },
+  {
+    "id": "5",
+    "firstName": "Yuki",
+    "lastName": "Tanaka",
+    "nationality": "Japanese",
+    "phoneNumber": "+81 3 1234 5678",
+    "lastMonthBill": 95.75,
+    "address": "654 Sakura Ave, Tokyo, Japan",
+    "servicesSubscribed": 4,
+    "age": 39
+  },
+  {
+    "id": "6",
+    "firstName": "Maria",
+    "lastName": "Garcia",
+    "nationality": "Spanish",
+    "phoneNumber": "+34 91 234 5678",
+    "lastMonthBill": 70.5,
+    "address": "987 Plaza Mayor, Madrid, Spain",
+    "servicesSubscribed": 2,
+    "age": 45
+  },
+  {
+    "id": "7",
+    "firstName": "Lars",
+    "lastName": "Nielsen",
+    "nationality": "Danish",
+    "phoneNumber": "+45 33 12 34 56",
+    "lastMonthBill": 82.25,
+    "address": "246 Copenhagen St, Copenhagen, Denmark",
+    "servicesSubscribed": 3,
+    "age": 33
+  },
+  {
+    "id": "8",
+    "firstName": "Olga",
+    "lastName": "Petrov",
+    "nationality": "Russian",
+    "phoneNumber": "+7 495 123-45-67",
+    "lastMonthBill": 60.0,
+    "address": "135 Red Square, Moscow, Russia",
+    "servicesSubscribed": 1,
+    "age": 29
+  },
+  {
+    "id": "9",
+    "firstName": "Chen",
+    "lastName": "Wei",
+    "nationality": "Chinese",
+    "phoneNumber": "+86 10 1234 5678",
+    "lastMonthBill": 78.5,
+    "address": "864 Beijing Rd, Beijing, China",
+    "servicesSubscribed": 2,
+    "age": 37
+  },
+  {
+    "id": "10",
+    "firstName": "Aisha",
+    "lastName": "Patel",
+    "nationality": "Indian",
+    "phoneNumber": "+91 22 2345 6789",
+    "lastMonthBill": 52.75,
+    "address": "753 Mumbai St, Mumbai, India",
+    "servicesSubscribed": 1,
+    "age": 26
+  },
+  {
+    "id": "11",
+    "firstName": "David",
+    "lastName": "Lee",
+    "nationality": "Korean",
+    "phoneNumber": "+82 2 1234 5678",
+    "lastMonthBill": 70.25,
+    "address": "987 Seoul St, Seoul, South Korea",
+    "servicesSubscribed": 3,
+    "age": 34
+  },
+  {
+    "id": "12",
+    "firstName": "Sophie",
+    "lastName": "Lefebvre",
+    "nationality": "French",
+    "phoneNumber": "+33 1 23 45 67 89",
+    "lastMonthBill": 55.5,
+    "address": "246 Paris Ave, Paris, France",
+    "servicesSubscribed": 2,
+    "age": 31
+  },
+  {
+    "id": "13",
+    "firstName": "Luca",
+    "lastName": "Rossi",
+    "nationality": "Italian",
+    "phoneNumber": "+39 02 1234 5678",
+    "lastMonthBill": 80.75,
+    "address": "753 Roma St, Rome, Italy",
+    "servicesSubscribed": 4,
+    "age": 39
+  },
+  {
+    "id": "14",
+    "firstName": "Hans",
+    "lastName": "Müller",
+    "nationality": "German",
+    "phoneNumber": "+49 30 12345678",
+    "lastMonthBill": 65.0,
+    "address": "864 Berlin Strasse, Berlin, Germany",
+    "servicesSubscribed": 2,
+    "age": 45
+  },
+  {
+    "id": "15",
+    "firstName": "Anna",
+    "lastName": "Kowalska",
+    "nationality": "Polish",
+    "phoneNumber": "+48 22 123 45 67",
+    "lastMonthBill": 75.25,
+    "address": "135 Warsaw St, Warsaw, Poland",
+    "servicesSubscribed": 3,
+    "age": 33
+  },
+  {
+    "id": "16",
+    "firstName": "Carlos",
+    "lastName": "González",
+    "nationality": "Mexican",
+    "phoneNumber": "+52 55 1234 5678",
+    "lastMonthBill": 60.0,
+    "address": "246 Mexico City Ave, Mexico City, Mexico",
+    "servicesSubscribed": 1,
+    "age": 29
+  },
+  {
+    "id": "17",
+    "firstName": "Sven",
+    "lastName": "Andersen",
+    "nationality": "Swedish",
+    "phoneNumber": "+46 8 123 45 67",
+    "lastMonthBill": 78.5,
+    "address": "753 Stockholm St, Stockholm, Sweden",
+    "servicesSubscribed": 2,
+    "age": 37
+  },
+  {
+    "id": "18",
+    "firstName": "Maria",
+    "lastName": "Santos",
+    "nationality": "Portuguese",
+    "phoneNumber": "+351 21 123 4567",
+    "lastMonthBill": 52.75,
+    "address": "864 Lisbon St, Lisbon, Portugal",
+    "servicesSubscribed": 1,
+    "age": 26
+  },
+  {
+    "id": "19",
+    "firstName": "Ali",
+    "lastName": "Khan",
+    "nationality": "Pakistani",
+    "phoneNumber": "+92 21 12345678",
+    "lastMonthBill": 70.25,
+    "address": "987 Karachi St, Karachi, Pakistan",
+    "servicesSubscribed": 3,
+    "age": 34
+  },
+  {
+    "id": "20",
+    "firstName": "Elena",
+    "lastName": "Ivanova",
+    "nationality": "Russian",
+    "phoneNumber": "+7 495 987-65-43",
+    "lastMonthBill": 55.5,
+    "address": "246 St. Petersburg St, St. Petersburg, Russia",
+    "servicesSubscribed": 2,
+    "age": 31
+  }
+]

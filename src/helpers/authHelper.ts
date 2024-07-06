@@ -1,5 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
+import { signOut } from "../feature/login/authSlice";
+import { store } from "../app/store";
 
 // Load users from local JSON file (simulated)
 const loadUsers = async () => {
@@ -35,8 +37,13 @@ export const authenticateUser = async (email: string, password: string) => {
   if (user) {
     const token = generateToken(user.email);
     Cookies.set("token", token, { expires: 1 }); // Store token in cookies for 1 day
-    return { success: true, token };
+    return { success: true, data: { token, name: user.name } };
   } else {
     return { success: false, message: "Invalid email or password" };
   }
+};
+
+export const signOutUser = () => {
+  Cookies.remove("token");
+  store.dispatch(signOut());
 };

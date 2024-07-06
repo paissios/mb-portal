@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { navbarModel } from "../../../models/layoutModels";
 
 import { styled, Theme, CSSObject } from "@mui/material/styles";
@@ -16,8 +16,13 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { Button } from "@mui/material";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 import classes from "./Navbar.module.scss";
+import { useDispatch } from "react-redux";
+import { signOut } from "../../../feature/login/authSlice";
+import Cookies from "js-cookie";
 
 const drawerWidth = 240;
 
@@ -91,13 +96,8 @@ const Drawer = styled(MuiDrawer, {
 
 const Navbar: React.FC<navbarModel> = (props) => {
   const { menuItems, activeMenu: open, setActiveMenu: setOpen } = props;
-  // const navigate = useNavigate();
-
-  // const logoutHandler = () => {
-  //   Cookies.remove("token");
-  //   navigate("/login");
-  // };
-
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -110,6 +110,12 @@ const Navbar: React.FC<navbarModel> = (props) => {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+  const logoutHandler = () => {
+    Cookies.remove("token");
+    dispatch(signOut());
+    navigate("/login");
   };
 
   return (
@@ -129,9 +135,27 @@ const Navbar: React.FC<navbarModel> = (props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            {activeMenuItem?.title}
-          </Typography>
+          <div className="d-flex align-items-center justify-content-between w-100">
+            <Typography variant="h6" noWrap component="div">
+              {activeMenuItem?.title}
+            </Typography>
+            <Button
+              variant="outlined"
+              startIcon={<LogoutIcon />}
+              onClick={() => {
+                logoutHandler();
+              }}
+              sx={{
+                backgroundColor: "#4dabf5",
+                color: "#FFFFFF",
+                "&:hover": {
+                  backgroundColor: "#2196f3",
+                },
+              }}
+            >
+              Log out
+            </Button>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import data from "./chartsData.json";
+import data from "../../assets/dummyData/chartsData.json";
 
 const ChartsDisplay: React.FC = () => {
   const [messageData, setMessageData] = useState<any[]>([]);
@@ -76,16 +76,9 @@ const ChartsDisplay: React.FC = () => {
   };
 
   return (
-    <div>
-      <div>
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={messageChartOptions}
-        />
-      </div>
-      <div>
-        <HighchartsReact highcharts={Highcharts} options={callChartOptions} />
-      </div>
+    <div className="py-3">
+      <HighchartsReact highcharts={Highcharts} options={messageChartOptions} />
+      <HighchartsReact highcharts={Highcharts} options={callChartOptions} />
     </div>
   );
 };

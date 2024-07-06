@@ -1,0 +1,13 @@
+{
+  "fullName": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "",
+  "confirmPassword": "",
+  "dateOfBirth": "1990-01-20",
+  "gender": "Male",
+  "occupation": "Software Developer",
+  "salary": 75000,
+  "bio": "A short bio about John Doe.",
+  "skills": ["JavaScript", "Python"],
+  "termsAccepted": true
+}

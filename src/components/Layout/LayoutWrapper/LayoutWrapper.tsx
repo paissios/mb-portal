@@ -16,7 +16,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 const LayoutWrapper: React.FC<layoutWrapperModel> = ({ children }) => {
-  const [activeMenu, setActiveMenu] = useState<boolean>(true);
+  const [activeMenu, setActiveMenu] = useState<boolean>(false);
 
   const menuItems = [
     {
