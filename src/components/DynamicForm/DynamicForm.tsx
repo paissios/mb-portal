@@ -111,9 +111,13 @@ const DynamicForm: React.FC<{
       onSubmit={handleSubmit}
     >
       {({ isSubmitting, errors, touched, values, setFieldValue }) => (
-        <Form className="p-4">
+        <Form className="p-4 d-md-flex d-block flex-wrap justify-content-between">
           {config.fields.map((field) => (
-            <Box key={field.name} mb={2}>
+            <Box
+              key={field.name}
+              mb={2}
+              sx={{ flex: "0 0 49%" }}
+            >
               {field.type === "select" && (
                 <FormControl
                   fullWidth
@@ -194,14 +198,20 @@ const DynamicForm: React.FC<{
                 )}
             </Box>
           ))}
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            disabled={isSubmitting}
+          <Box
+            sx={{
+              flex: "0 0 100%",
+            }}
           >
-            Submit
-          </Button>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              disabled={isSubmitting}
+            >
+              Submit
+            </Button>
+          </Box>
         </Form>
       )}
     </Formik>

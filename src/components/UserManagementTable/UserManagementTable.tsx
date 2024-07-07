@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
+import { Box, Button, Dialog, DialogContent, DialogTitle } from "@mui/material";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -8,6 +8,7 @@ import UserFormModal from "../UserFormModal/UserFormModal";
 import UserDetailsModal from "../UserDetailsModal/UserDetailsModal";
 import { UserModel } from "../../models/userManagementModels";
 import usersInfo from "../../assets/dummyData/dummyUsers.json";
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 const UserManagement: React.FC = () => {
   const [users, setUsers] = useState<UserModel[]>(
@@ -85,8 +86,20 @@ const UserManagement: React.FC = () => {
   };
 
   return (
-    <div style={{ height: 500, width: "100%" }} className="p-3">
-      <Button onClick={handleAdd}>Add User</Button>
+    <Box sx={{ height: 500, width: "100%" }} className="p-4">
+      <Button
+        onClick={handleAdd}
+        variant="outlined"
+        sx={{
+          marginBottom: "10px",
+          display: "flex",
+          gap: "4px",
+          marginInlineStart: "auto",
+        }}
+      >
+        <PersonAddIcon />
+        {/* Add User */}
+      </Button>
       <DataGrid
         rows={users}
         columns={columns}
@@ -118,7 +131,7 @@ const UserManagement: React.FC = () => {
           )}
         </DialogContent>
       </Dialog>
-    </div>
+    </Box>
   );
 };
 

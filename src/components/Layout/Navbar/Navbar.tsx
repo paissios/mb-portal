@@ -128,6 +128,7 @@ const Navbar: React.FC<navbarModel> = (props) => {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
+            className="d-sm-flex d-none"
             sx={{
               marginRight: 5,
               ...(open && { display: "none" }),
