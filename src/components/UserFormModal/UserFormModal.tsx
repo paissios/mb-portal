@@ -54,6 +54,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 label="First Name"
                 error={touched.firstName && errors.firstName}
                 helperText={touched.firstName && errors.firstName}
+                data-testid="firstName"
               />
             </Grid>
             <Grid item xs={6}>
@@ -64,6 +65,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 label="Last Name"
                 error={touched.lastName && errors.lastName}
                 helperText={touched.lastName && errors.lastName}
+                data-testid="lastName"
               />
             </Grid>
             <Grid item xs={6}>
@@ -74,6 +76,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 label="Nationality"
                 error={touched.nationality && errors.nationality}
                 helperText={touched.nationality && errors.nationality}
+                data-testid="nationality"
               />
             </Grid>
             <Grid item xs={6}>
@@ -84,6 +87,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 label="Phone Number"
                 error={touched.phoneNumber && errors.phoneNumber}
                 helperText={touched.phoneNumber && errors.phoneNumber}
+                data-testid="phoneNumber"
               />
             </Grid>
             <Grid item xs={6}>
@@ -95,6 +99,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 type="number"
                 error={touched.lastMonthBill && errors.lastMonthBill}
                 helperText={touched.lastMonthBill && errors.lastMonthBill}
+                data-testid="lastMonthBill"
               />
             </Grid>
             <Grid item xs={6}>
@@ -105,6 +110,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 label="Address"
                 error={touched.address && errors.address}
                 helperText={touched.address && errors.address}
+                data-testid="address"
               />
             </Grid>
             <Grid item xs={6}>
@@ -118,6 +124,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 helperText={
                   touched.servicesSubscribed && errors.servicesSubscribed
                 }
+                data-testid="servicesSubscribed"
               />
             </Grid>
             <Grid item xs={6}>
@@ -129,6 +136,7 @@ const UserForm: React.FC<UserFormProps> = ({ user, onSave, onCancel }) => {
                 type="number"
                 error={touched.age && errors.age}
                 helperText={touched.age && errors.age}
+                data-testid="age"
               />
             </Grid>
           </Grid>

@@ -21,19 +21,19 @@ const DynamicForm: React.FC<{
   config: FormConfigModel;
   initialValues: Record<string, any>;
 }> = ({ config, initialValues }) => {
-  const formInitialValues = config.fields.reduce((acc, field) => {
+  const formInitialValues = config.fields.reduce((formValues, field) => {
     if (field.type === "multiselect") {
-      acc[field.name] = initialValues[field.name] || [];
+      formValues[field.name] = initialValues[field.name] || [];
     } else if (field.type === "checkbox") {
-      acc[field.name] = initialValues[field.name] || false;
+      formValues[field.name] = initialValues[field.name] || false;
     } else {
-      acc[field.name] = initialValues[field.name] || "";
+      formValues[field.name] = initialValues[field.name] || "";
     }
-    return acc;
+    return formValues;
   }, {} as Record<string, any>);
 
   let validationSchema = Yup.object().shape(
-    config.fields.reduce((acc, field) => {
+    config.fields.reduce((fieldValidators, field) => {
       let validator;
 
       switch (field.type) {
@@ -82,8 +82,8 @@ const DynamicForm: React.FC<{
         validator = validator.required(`${field.label} is required`);
       }
 
-      acc[field.name] = validator;
-      return acc;
+      fieldValidators[field.name] = validator;
+      return fieldValidators;
     }, {} as Record<string, Yup.AnySchema>)
   );
 
@@ -113,11 +113,7 @@ const DynamicForm: React.FC<{
       {({ isSubmitting, errors, touched, values, setFieldValue }) => (
         <Form className="p-4 d-md-flex d-block flex-wrap justify-content-between">
           {config.fields.map((field) => (
-            <Box
-              key={field.name}
-              mb={2}
-              sx={{ flex: "0 0 49%" }}
-            >
+            <Box key={field.name} mb={2} sx={{ flex: "0 0 49%" }}>
               {field.type === "select" && (
                 <FormControl
                   fullWidth

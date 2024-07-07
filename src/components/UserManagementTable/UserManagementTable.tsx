@@ -9,6 +9,7 @@ import UserDetailsModal from "../UserDetailsModal/UserDetailsModal";
 import { UserModel } from "../../models/userManagementModels";
 import usersInfo from "../../assets/dummyData/dummyUsers.json";
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import { v4 as uuidv4 } from 'uuid';
 
 const UserManagement: React.FC = () => {
   const [users, setUsers] = useState<UserModel[]>(
@@ -80,10 +81,12 @@ const UserManagement: React.FC = () => {
     if (user.id) {
       setUsers(users.map((u) => (u.id === user.id ? user : u)));
     } else {
-      setUsers([...users, { ...user, id: Date.now().toString() }]);
+      setUsers([...users, { ...user, id: uuidv4() }]);
     }
+    
     setOpenForm(false);
   };
+  console.log(users);
 
   return (
     <Box sx={{ height: 500, width: "100%" }} className="p-4">
